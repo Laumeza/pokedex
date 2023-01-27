@@ -72,6 +72,23 @@ const Pokemons = () => {
                         </select>
                     </div>
             </div>
+            <div className='container__pagination'>
+                <button 
+                    onClick={() => setPage(page-1)}
+                    disabled={page===1}
+                >
+                    <i className='bx bxs-skip-previous-circle' ></i>
+                </button>
+                {page}
+                {"/"}
+                {lastPage}
+                <button 
+                    onClick={() => setPage(page+1)}
+                    disabled={page===lastPage}
+                >
+                    <i className='bx bxs-skip-next-circle'></i>
+                </button>
+            </div>
             <ul className='list__pokemons'>
                 {
                     pokemonspaginated.map(pokemon => (
@@ -82,21 +99,6 @@ const Pokemons = () => {
                     ))
                 }
             </ul>
-            <button 
-                onClick={() => setPage(page-1)}
-                disabled={page===1}
-            >
-                <i className='bx bxs-skip-previous-circle' ></i>
-            </button>
-            {page}
-            {"/"}
-            {lastPage}
-            <button 
-                onClick={() => setPage(page+1)}
-                disabled={page===lastPage}
-            >
-                <i className='bx bxs-skip-next-circle'></i>
-            </button>
         </div>
     );
 };
