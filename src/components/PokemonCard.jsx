@@ -75,7 +75,7 @@ const PokemonCard = ({url}) => {
 
     return (
         <div style={{background: `linear-gradient(to bottom, white, #CAE099, ${getBackground()})`, border: "solid 6px white"}} className='card' onClick={() => navigate(`/pokemons/${pokemon.id}`)}>
-            <div className='card'>
+            <div className='card' >
             <img className='card__img' src={pokemon.sprites?.other.home.front_default} alt="" />
             <b className='card__tittle' style={{color: getBackground()}}>{pokemon.name}</b>
             <ul className='card__section-type'>
